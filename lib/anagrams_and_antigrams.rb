@@ -23,11 +23,9 @@ def palindrome?(string1, string2)
 end
 
 def word_contains_vowel?(string1, string2)
-  (sorted_chars_from_string(string1).include?("a") | sorted_chars_from_string(string1).include?("e") | sorted_chars_from_string(string1).include?("i") |
-  sorted_chars_from_string(string1).include?("o") |
-  sorted_chars_from_string(string1).include?("u") ) &
-  (sorted_chars_from_string(string2).include?("a") |
-  sorted_chars_from_string(string2).include?("e") | sorted_chars_from_string(string2).include?("i") |
-  sorted_chars_from_string(string2).include?("o") |
-  sorted_chars_from_string(string2).include?("u") )
+  processed_string1 = sorted_chars_from_string(string1)
+  processed_string2 = sorted_chars_from_string(string2)
+  (processed_string1.include?("a") | processed_string1.include?("e") | processed_string1.include?("i") | processed_string1.include?("o") | processed_string1.include?("u") ) &
+  (processed_string2.include?("a") | processed_string2.include?("e") | processed_string2.include?("i") | processed_string2.include?("o") |
+  processed_string2.include?("u") )
 end
