@@ -13,4 +13,8 @@ def anagrams?(string1, string2)
   sorted_chars_from_string(string1) == sorted_chars_from_string(string2)
 end
 
-# def palindrome(string)
+def palindrome?(string1, string2)
+  if (string1.reverse == string1) & (string2.reverse == string2)
+    "Both words are palindrome."
+  end
+end
