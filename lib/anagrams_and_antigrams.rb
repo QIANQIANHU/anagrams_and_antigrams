@@ -1,6 +1,8 @@
 def anagrams_and_antigrams?(string1, string2)
   # case 1: simple anagrams or not
-  anagrams?(string1, string2)
+  if anagrams?(string1, string2)
+     "These words are anagrams."
+  end
 end
 
 def sorted_chars_from_string(string)
