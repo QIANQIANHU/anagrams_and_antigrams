@@ -19,5 +19,8 @@ describe('#anagrams_and_antigrams') do
   it("check two words are antigrams") do
     expect(anagrams_and_antigrams?("hi","bye")).to(eq("These words have no letter matches and are antigrams."))
   end
+  it("check multiple words being anagrams or antigrams.") do
+    expect(anagrams_and_antigrams?("k ace tea"," Eat cake!")).to(eq("These phrases are anagrams."))
+  end
 
 end

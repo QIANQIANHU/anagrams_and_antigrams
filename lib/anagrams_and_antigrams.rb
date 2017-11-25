@@ -8,6 +8,8 @@ def anagrams_and_antigrams?(string1, string2)
      "These words are anagrams."  # case 1,2: if words are anagrams or not
   elsif antigrams?(string1, string2)
      "These words have no letter matches and are antigrams." # case 5: if words are antigrams or not
+  elsif phrase_anagrams?(string1, string2)
+      "These phrases are anagrams."
   end
 
 end
@@ -46,4 +48,10 @@ def antigrams?(string1, string2)
     end
   end
   return true
+end
+
+def phrase_anagrams?(string1, string2)
+  new_string1 = string1.downcase.gsub(/[^\w\s\d]/, '').chars.sort
+  new_string2 = string2.downcase.gsub(/[^\w\s\d]/, '').chars.sort
+  new_string1 == new_string1
 end
