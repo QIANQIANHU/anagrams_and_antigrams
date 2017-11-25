@@ -10,6 +10,8 @@ def anagrams_and_antigrams?(string1, string2)
      "These words have no letter matches and are antigrams." # case 5: if words are antigrams or not
   elsif (phrase_anagrams?(string1, string2)) & (word_contains_vowel?(string1, string2))
       "These phrases are anagrams." #case 6: if phrases are anagrams or not
+  elsif antigrams?(string1, string2)
+      "These phrases are antigrams." # case 7: if phrases are antigrams or not
   end
 
 end
@@ -35,8 +37,8 @@ def word_contains_vowel?(string1, string2)
 end
 
 def antigrams?(string1, string2)
-  string1_array = string1.downcase.split("")
-  string2_array = string2.downcase.split("")
+  string1_array = string1.downcase.gsub(/[^a-z]/, '').split("")
+  string2_array = string2.downcase.gsub(/[^a-z]/, '').split("")
   string1_array.each do |letter|
     if string2_array.include?(letter)
       return false
@@ -51,7 +53,7 @@ def antigrams?(string1, string2)
 end
 
 def phrase_anagrams?(string1, string2)
-  new_string1 = string1.downcase.gsub(/[^\w\s\d]/, '').chars.sort
-  new_string2 = string2.downcase.gsub(/[^\w\s\d]/, '').chars.sort
+  new_string1 = string1.downcase.gsub(/[^a-z]/, '').chars.sort
+  new_string2 = string2.downcase.gsub(/[^a-z]/, '').chars.sort
   new_string1 == new_string1
 end
