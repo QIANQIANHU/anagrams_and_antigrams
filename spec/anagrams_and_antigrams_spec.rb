@@ -13,4 +13,7 @@ describe('#anagrams_and_antigrams') do
   it("check two words are palindrome or not") do
     expect(anagrams_and_antigrams?("abba", "baab")).to(eq("These words are palindrome."))
   end
+  it("check two words are both contain a vowel") do
+    expect(anagrams_and_antigrams?("tht","hhn")).to(eq("You need to input actual words!"))
+  end
 end
