@@ -8,8 +8,8 @@ def anagrams_and_antigrams?(string1, string2)
      "These words are anagrams."  # case 1,2: if words are anagrams or not
   elsif antigrams?(string1, string2)
      "These words have no letter matches and are antigrams." # case 5: if words are antigrams or not
-  elsif phrase_anagrams?(string1, string2)
-      "These phrases are anagrams."
+  elsif (phrase_anagrams?(string1, string2)) & (word_contains_vowel?(string1, string2))
+      "These phrases are anagrams." #case 6: if phrases are anagrams or not
   end
 
 end
