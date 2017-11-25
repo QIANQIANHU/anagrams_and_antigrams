@@ -11,6 +11,6 @@ describe('#anagrams_and_antigrams') do
     expect(anagrams_and_antigrams?("Tea", "Eat")).to(eq( "These words are anagrams."))
   end
   it("check two words are palindrome or not") do
-    expect(palindrome?("abba", "baab")).to(eq("Both words are palindrome."))
+    expect(anagrams_and_antigrams?("abba", "baab")).to(eq("These words are palindrome."))
   end
 end
