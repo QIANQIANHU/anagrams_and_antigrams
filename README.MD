@@ -31,8 +31,8 @@ It is a project application (using Ruby) that takes two words or phrases and ret
 
 ## Setup/Installation Requirements
 
-* Copy repository from GitHub to your computer using Terminal command $ git clone and then in a browser, or
-* Open [link](https://QIANQIANHU.github.io/anagrams_and_antigrams) in your browser.
+* Copy repository from GitHub to your computer using Terminal command $ git clone and then in a browser
+* using Terminal command $ rspec
 
 ## Support and contact details
 
