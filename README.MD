@@ -32,11 +32,11 @@ It is a project application (using Ruby) that takes two words or phrases and ret
 ## Setup/Installation Requirements
 
 * Copy repository from GitHub to your computer using Terminal command $ git clone and then in a browser
-* using Terminal command $ rspec
+* Using Terminal command $ rspec to check the result
 
 ## Support and contact details
 
-Contact email: huqianqian@xmail.com
+Contact email: huqianqian@ymail.com
 
 ## Technologies Used
 
